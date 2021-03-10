@@ -12,6 +12,8 @@ Exploring SQL through Dune Analytics
 
 - Dune Analytics Documentation: https://hackmd.io/k71ZUSTxQVKGqOcvR6OXnw#Dune-Analytics-TLDR
 
+- Get Started Guide: https://duneanalytics.com/blog/get-started-guide
+
 ## Python
 
 ## R
