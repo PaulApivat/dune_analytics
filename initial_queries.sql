@@ -1,9 +1,10 @@
 
-## sample query 1
+/* sample query 1 */
 
 select * from ethereum."transactions" order by block_time desc limit 15
 
-## sample query 2
+/* sample query 2 */
+
 # NOTE: ETH has 18 decimals precision, divide number by 1e18 to get values in ETH not in Wei
 # Summarizing total value ETH sent in the last 10 days (also change to 30 days)
 
@@ -13,5 +14,22 @@ WHERE block_time > now() - interval '10 days'
 GROUP BY 1 
 ORDER BY 1
 
-## sample query 3
+/* sample query 3 */
 select * from prices."usd" order by price desc limit 5
+
+
+/* Easy query */
+SELECT * FROM aave."LendingPool_call_flashLoan" 
+LIMIT 5
+
+
+/* Select first five rows of Contract Addresses column in AAVE Lending */
+
+SELECT contract_address FROM aave."LendingPool_call_flashLoan" 
+LIMIT 5
+
+/* Count total number of contract addresses in AAVE Lending pool */
+
+SELECT COUNT(contract_address) FROM aave."LendingPool_call_flashLoan" 
+LIMIT 5
+

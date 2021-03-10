@@ -1,8 +1,15 @@
 # Dune Analytics
 
-Exploring SQL through Dune Analytics
-
 ## Motivation
+
+### Initial
+
+Exploring SQL through Dune Analytics
+Learn about the applications built on Ethereum from SQL queries
+
+### Later
+
+Premium Acct, pull data
 
 ## Initial Scope
 
