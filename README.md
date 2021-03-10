@@ -21,6 +21,8 @@ Premium Acct, pull data
 
 - Get Started Guide: https://duneanalytics.com/blog/get-started-guide
 
+- Video Tutorial: https://www.youtube.com/watch?v=AWlwO9T8dkY
+
 ## Python
 
 ## R

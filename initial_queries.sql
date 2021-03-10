@@ -33,3 +33,48 @@ LIMIT 5
 SELECT COUNT(contract_address) FROM aave."LendingPool_call_flashLoan" 
 LIMIT 5
 
+/* ERC Query */
+SELECT * FROM erc20."ERC20_evt_Transfer"
+LIMIT 5
+
+
+
+/* More Advanced Queries */
+/* Join data from multiple tables */
+
+with txs as (select block_time, value, price
+from ethereum."transactions" e
+join prices."layer1_usd" p
+on p.minute = date_trunc('minute', e.block_time)
+where block_time > now() - interval '10 days'
+and symbol = 'ETH'
+)
+
+select date_trunc('day', block_time) as "Date", sum(value * price / 1e18) as "Value" from txs
+group by 1 order by 1
+
+/* ETH sent by VB past in USD per month */
+WITH txs AS (SELECT block_time, value, price 
+FROM ethereum."transactions" e 
+JOIN prices.'layer1_usd' p 
+ON p.minute = date_trunc('minute', e.block_time)
+AND ("from"='\x1Db3439a222C519ab44bb1144fC28167b4Fa6EE6'
+    OR "from"='\xAb5801a7D398351b8bE11C439e05C5B3259aeC9B')
+AND p.symbol = 'ETH'  
+)
+
+
+with txs as (select block_time, value, price
+from ethereum."transactions" e
+join prices."layer1_usd" p
+on p.minute = date_trunc('minute', e.block_time)
+and ("from"='\x1Db3439a222C519ab44bb1144fC28167b4Fa6EE6'
+     or "from"='\xAb5801a7D398351b8bE11C439e05C5B3259aeC9B')
+and p.symbol = 'ETH'
+)
+
+select date_trunc('month', block_time) as "Date", sum(value * price / 1e18) as "Value" from txs
+group by 1 order by 1
+
+
+
