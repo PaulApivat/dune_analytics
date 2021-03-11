@@ -90,4 +90,15 @@ select date_trunc('month', block_time) as "Date", sum(value * price / 1e18) as "
 group by 1 order by 1
 
 
+/* EatTheBlocks tutorial */
+/* Maker DAI Event Transfer */
+
+
+SELECT date_trunc('day', evt_block_time), src, dst, (wad / 10 ^ 18) * p.price AS amount FROM makermcd."DAI_evt_Transfer"
+LEFT JOIN prices.usd p ON p.minute = date_trunc('minute', evt_block_time)
+WHERE src != '\x0000000000000000000000000000000000000000' AND dst != '\x0000000000000000000000000000000000000000' AND evt_block_time > now() - interval '7 days' AND p.symbol = 'DAI'
+ORDER BY wad DESC
+LIMIT 10
+
+
 
