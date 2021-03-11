@@ -100,5 +100,18 @@ WHERE src != '\x0000000000000000000000000000000000000000' AND dst != '\x00000000
 ORDER BY wad DESC
 LIMIT 10
 
+/* Visit Abstractions file in Dune Analytics GitHub */
+/* Uniswap Trading Volume  */
 
+SELECT
+date_trunc('day', block_time),
+SUM(usd_value_of_eth)
+FROM (
+SELECT block_time, usd_value_of_eth FROM uniswap."view_eth_purchase"
+UNION ALL
+SELECT block_time, usd_value_of_eth FROM uniswap."view_token_purchase"
+) AS eth_usd
+WHERE block_time > now() - interval '7 days'
+GROUP BY 1
+ORDER BY 1
 
