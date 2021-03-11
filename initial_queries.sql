@@ -1,3 +1,16 @@
+/* Compare Dune Analytics with Google BigQuery */
+/* cross-check by querying Ethereum Block from both platforms */
+
+/* Big Query - Ethereum Blocks  */
+SELECT * FROM `bigquery-public-data.ethereum_blockchain.blocks` 
+WHERE DATE(timestamp) = "2015-07-30" AND number < 11
+LIMIT 10
+
+
+/* Dune Analytics - Ethereum Blocks */
+SELECT * FROM ethereum."blocks" 
+LIMIT 10
+
 
 /* sample query 1 */
 
