@@ -6,10 +6,10 @@
 
 #### Exploratory phase: Explore Key Metrics for DeFi
 
-    - Scope DeFi universe - see [DeFi Pulse](https://defipulse.com/)
-    - What are the key metrics for DeFi? [Research]
-    - What are fundamental metrics for any project? [Research]
-    - What metrics from [GlassNode](https://glassnode.com/metrics#tier-1) are worth querying? [Research]
+- Scope DeFi universe - see [DeFi Pulse](https://defipulse.com/)
+- What are the key metrics for DeFi? [Research]
+- What are fundamental metrics for any project? [Research]
+- What metrics from [GlassNode](https://glassnode.com/metrics#tier-1) are worth querying? [Research]
 
 #### Presentation phase
 
