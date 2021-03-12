@@ -11,16 +11,19 @@
     - What are fundamental metrics for any project? [Research]
     - What metrics from [GlassNode](https://glassnode.com/metrics#tier-1) are worth querying? [Research]
 
+#### Presentation phase
+
 - Create a Dashboard to Answer the questions
+
+#### Goals
 
 - Learn SQL through Dune Analytics
 - Learn about the applications built on Ethereum from SQL queries
-
 - Create a version of the Moody dashboard
 
 ### Later
 
-Premium Acct, pull data
+- Premium Acct, pull data
 
 ## Initial Scope
 
