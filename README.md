@@ -44,10 +44,17 @@
 # Documenting Progress
 
 3/10 - Getting started with SQL queries on the platform
+3/11 - 3/12 Note basic queries on DeFi projects
 
 # Getting Data
 
-## Web Scraping
+_Note_: Most of the initial phase of this project happens on Dune Analytic's platform.
+
+An extension _could_ be in the works if it makes sense to upgrade.
+
+However, we could go through the below phases with data from the [GlassNode API](https://docs.glassnode.com/general-info/api-key).
+
+## Web Scraping / API
 
 ## Data Cleaning
 
@@ -60,3 +67,5 @@
 # Results
 
 # Presentation / Productionization
+
+- Phase 1: Dune Analytics Dashboard
